@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clínica del Marketing — Marketing y automatizaciones para empresas de salud e industria</title>
+<meta name="description" content="Agencia de marketing y automatizaciones en Valparaíso. Diagnóstico, contenido, captación, campañas y chatbots para empresas de salud, industria y pymes. Trabajo medido, no adjetivos.">
+<link rel="canonical" href="https://www.clinicadelmarketing.cl/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:title" content="Clínica del Marketing">
+<meta property="og:description" content="Marketing y automatizaciones para empresas de salud, industria y pymes. Diagnóstico primero, después tratamiento.">
+<meta property="og:url" content="https://www.clinicadelmarketing.cl/">
+<meta name="theme-color" content="#0B3B36">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B3B36'/%3E%3Cpath d='M5 17h4l2.5-6 3.5 12 3-9 2 3h7' fill='none' stroke='%235EEAD4' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0B1F1C; --ink-2:#3C534F; --ink-3:#6B807C;
+    --brand:#0B3B36; --brand-2:#0E5E54; --mint:#5EEAD4; --mint-soft:#E6FAF6;
+    --paper:#FBFAF7; --white:#fff; --line:#E4E7E5; --amber:#C2703A;
+    --wrap:1120px; --r:14px;
+    --shadow:0 1px 2px rgba(11,31,28,.05), 0 12px 32px -12px rgba(11,31,28,.14);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font:400 17px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; text-wrap:pretty;
+  }
+  h1,h2,h3{line-height:1.15; letter-spacing:-.02em; margin:0; text-wrap:balance; font-weight:650}
+  h1{font-size:clamp(2.1rem,1.2rem + 3.6vw,3.75rem); letter-spacing:-.03em}
+  h2{font-size:clamp(1.6rem,1.1rem + 2vw,2.5rem)}
+  h3{font-size:1.14rem}
+  p{margin:0}
+  a{color:inherit}
+  .wrap{max-width:var(--wrap); margin-inline:auto; padding-inline:22px}
+  .eyebrow{font-size:.775rem; font-weight:650; letter-spacing:.13em; text-transform:uppercase; color:var(--brand-2)}
+  .lede{font-size:clamp(1.05rem,.98rem + .4vw,1.28rem); color:var(--ink-2)}
+  section{padding:clamp(60px,7vw,104px) 0}
+  .stack>*+*{margin-top:18px}
+
+  /* header */
+  header{position:sticky; top:0; z-index:50; background:rgba(251,250,247,.86); backdrop-filter:blur(10px); border-bottom:1px solid var(--line)}
+  .nav{display:flex; align-items:center; gap:26px; height:68px}
+  .logo{display:flex; align-items:center; gap:10px; font-weight:680; letter-spacing:-.02em; text-decoration:none; font-size:1.02rem}
+  .logo svg{display:block; flex:none}
+  .logo span i{font-style:normal; color:var(--brand-2)}
+  .nav nav{margin-left:auto; display:flex; gap:26px}
+  .nav nav a{text-decoration:none; color:var(--ink-2); font-size:.95rem; font-weight:500}
+  .nav nav a:hover{color:var(--brand-2)}
+  .logo span{white-space:nowrap}
+  @media (max-width:860px){ .nav nav{display:none} }
+  @media (max-width:430px){
+    .nav{gap:12px; height:62px}
+    .logo{font-size:.92rem; gap:8px}
+    .logo svg{width:26px; height:26px}
+    .nav .btn{padding:10px 16px; font-size:.88rem}
+    .cta-long{display:none}
+  }
+
+  .btn{display:inline-flex; align-items:center; gap:9px; border-radius:999px; padding:12px 22px; font-weight:600; font-size:.96rem; text-decoration:none; border:1px solid transparent; transition:transform .12s ease, background .15s ease}
+  .btn:active{transform:translateY(1px)}
+  .btn-primary{background:var(--brand); color:#fff}
+  .btn-primary:hover{background:var(--brand-2)}
+  .btn-ghost{border-color:var(--line); background:var(--white); color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--brand-2); color:var(--brand-2)}
+
+  /* hero */
+  .hero{padding-top:clamp(48px,6vw,86px); padding-bottom:clamp(48px,6vw,80px)}
+  .hero-grid{display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center}
+  @media (max-width:940px){ .hero-grid{grid-template-columns:1fr; gap:40px} }
+  .hero h1 em{font-style:normal; color:var(--brand-2)}
+  .hero-cta{display:flex; flex-wrap:wrap; gap:12px; margin-top:30px}
+  .hero-note{margin-top:20px; font-size:.9rem; color:var(--ink-3)}
+
+  .chart{background:var(--white); border:1px solid var(--line); border-radius:20px; padding:24px; box-shadow:var(--shadow)}
+  .chart-top{display:flex; justify-content:space-between; align-items:baseline; padding-bottom:14px; border-bottom:1px dashed var(--line)}
+  .chart-top strong{font-size:.95rem}
+  .chart-top span{font-size:.78rem; color:var(--ink-3)}
+  .vitals{list-style:none; margin:0; padding:16px 0 4px; display:grid; gap:13px}
+  .vitals li{display:grid; grid-template-columns:1fr auto; align-items:center; gap:14px; font-size:.94rem}
+  .vitals li span{color:var(--ink-2)}
+  .vitals li b{font-variant-numeric:tabular-nums; font-weight:650; color:var(--brand)}
+  .bar{grid-column:1/-1; height:6px; border-radius:99px; background:var(--mint-soft); overflow:hidden}
+  .bar i{display:block; height:100%; background:linear-gradient(90deg,var(--brand-2),var(--mint)); border-radius:99px}
+
+  /* generic cards */
+  .grid{display:grid; gap:20px}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  @media (max-width:940px){ .g3{grid-template-columns:1fr 1fr} }
+  @media (max-width:680px){ .g3,.g2{grid-template-columns:1fr} }
+  .card{background:var(--white); border:1px solid var(--line); border-radius:var(--r); padding:26px}
+  .card h3{margin-bottom:9px}
+  .card p{color:var(--ink-2); font-size:.965rem}
+  .ico{width:38px; height:38px; border-radius:10px; background:var(--mint-soft); display:grid; place-items:center; margin-bottom:16px}
+  .ico svg{stroke:var(--brand-2); fill:none; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round}
+
+  /* problema */
+  .band{background:var(--brand); color:#EAF6F3}
+  .band h2{color:#fff}
+  .band .lede{color:#B9D6D0}
+  .sym{list-style:none; margin:28px 0 0; padding:0; display:grid; gap:14px; grid-template-columns:repeat(2,1fr)}
+  @media (max-width:680px){ .sym{grid-template-columns:1fr} }
+  .sym li{display:flex; gap:12px; align-items:flex-start; font-size:.99rem; color:#D6EAE6}
+  .sym li svg{flex:none; margin-top:4px; stroke:var(--mint); fill:none; stroke-width:2; stroke-linecap:round}
+
+  /* método */
+  .steps{counter-reset:s; display:grid; gap:0; margin-top:34px; border-top:1px solid var(--line)}
+  .step{display:grid; grid-template-columns:74px 1fr; gap:24px; padding:24px 0; border-bottom:1px solid var(--line); align-items:start}
+  @media (max-width:680px){ .step{grid-template-columns:54px 1fr; gap:16px} }
+  .step-n{counter-increment:s; font-variant-numeric:tabular-nums; font-weight:650; color:var(--brand-2); font-size:.9rem; letter-spacing:.08em; padding-top:3px}
+  .step-n::before{content:"0" counter(s)}
+  .step h3{margin-bottom:6px}
+  .step p{color:var(--ink-2); font-size:.975rem}
+  .tag{display:inline-block; margin-top:10px; font-size:.78rem; font-weight:600; color:var(--amber); border:1px solid #EBD6C6; background:#FCF4EE; border-radius:99px; padding:4px 11px}
+
+  /* planes */
+  .plan{display:flex; flex-direction:column; background:var(--white); border:1px solid var(--line); border-radius:var(--r); padding:28px}
+  .plan.feature{border-color:var(--brand-2); box-shadow:var(--shadow); position:relative}
+  .plan.feature::after{content:"Más pedido"; position:absolute; top:-11px; left:28px; background:var(--brand); color:#fff; font-size:.72rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase; padding:4px 11px; border-radius:99px}
+  .plan h3{font-size:1.3rem}
+  .plan .who{color:var(--ink-3); font-size:.9rem; margin:8px 0 20px}
+  .plan ul{list-style:none; margin:0 0 24px; padding:0; display:grid; gap:11px; font-size:.945rem; color:var(--ink-2)}
+  .plan li{display:flex; gap:10px; align-items:flex-start}
+  .plan li svg{flex:none; margin-top:5px; stroke:var(--brand-2); fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round}
+  .plan .btn{margin-top:auto; justify-content:center}
+
+  /* quién */
+  .bio{display:grid; grid-template-columns:.9fr 1.1fr; gap:48px; align-items:center}
+  @media (max-width:860px){ .bio{grid-template-columns:1fr; gap:28px} }
+  .bio-card{background:var(--white); border:1px solid var(--line); border-radius:var(--r); padding:28px; box-shadow:var(--shadow)}
+  .bio-card dl{margin:0; display:grid; gap:14px}
+  .bio-card dt{font-size:.75rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3); font-weight:650}
+  .bio-card dd{margin:3px 0 0; font-size:.97rem; color:var(--ink)}
+
+  /* faq */
+  details{border-bottom:1px solid var(--line); padding:20px 0}
+  details summary{cursor:pointer; font-weight:600; list-style:none; display:flex; justify-content:space-between; gap:20px; align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+"; color:var(--brand-2); font-size:1.4rem; line-height:1; font-weight:400}
+  details[open] summary::after{content:"–"}
+  details p{margin-top:12px; color:var(--ink-2); font-size:.975rem; max-width:72ch}
+
+  /* cta final */
+  .final{background:var(--brand); color:#fff; border-radius:22px; padding:clamp(34px,5vw,60px); text-align:center}
+  .final h2{color:#fff}
+  .final p{color:#B9D6D0; margin:14px auto 0; max-width:56ch}
+  .final .btn-primary{background:var(--mint); color:var(--brand)}
+  .final .btn-primary:hover{background:#8DF3E2}
+  .final .btn-ghost{background:transparent; border-color:rgba(255,255,255,.32); color:#fff}
+  .final .btn-ghost:hover{border-color:#fff; color:#fff}
+  .final-cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px}
+
+  footer{padding:44px 0 60px; border-top:1px solid var(--line); margin-top:clamp(60px,7vw,100px)}
+  .foot{display:flex; flex-wrap:wrap; gap:18px 34px; align-items:center; justify-content:space-between; font-size:.9rem; color:var(--ink-3)}
+  .foot a{color:var(--ink-2); text-decoration:none}
+  .foot a:hover{color:var(--brand-2)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Clínica del Marketing, inicio">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B3B36"/><path d="M5 17h4l2.5-6 3.5 12 3-9 2 3h7" fill="none" stroke="#5EEAD4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Clínica del <i>Marketing</i></span>
+    </a>
+    <nav>
+      <a href="#metodo">Método</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Planes</a>
+      <a href="#quien">Quiénes somos</a>
+    </nav>
+    <a class="btn btn-primary" href="#contacto"><span class="cta-long">Pedir&nbsp;</span>Diagnóstico</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="stack">
+        <p class="eyebrow">Marketing y automatizaciones · Valparaíso, Chile</p>
+        <h1>Su marketing necesita un <em>diagnóstico</em>, no otra campaña a ciegas.</h1>
+        <p class="lede">Trabajamos con empresas de salud, industria y servicios que venden a otras empresas: primero medimos qué está fallando, después tratamos. Contenido, captación, campañas, chatbots y reportes que se leen en cotizaciones, no en "me gusta".</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contacto">Pedir diagnóstico gratuito</a>
+          <a class="btn btn-ghost" href="#metodo">Cómo trabajamos</a>
+        </div>
+        <p class="hero-note">Sin permanencia forzada. Usted aprueba cada pieza antes de que se publique.</p>
+      </div>
+
+      <div class="chart" role="img" aria-label="Ficha de ejemplo con los signos vitales que medimos: cotizaciones calificadas, costo por cotización, tiempo de primera respuesta y publicaciones al mes.">
+        <div class="chart-top">
+          <strong>Ficha del paciente</strong>
+          <span>Signos vitales que medimos</span>
+        </div>
+        <ul class="vitals">
+          <li><span>Cotizaciones calificadas al mes</span><b>meta</b><i class="bar"><i style="width:78%"></i></i></li>
+          <li><span>Costo por cotización</span><b>a la baja</b><i class="bar"><i style="width:46%"></i></i></li>
+          <li><span>Tiempo de primera respuesta</span><b>&lt; 1 hora</b><i class="bar"><i style="width:88%"></i></i></li>
+          <li><span>Publicaciones al mes</span><b>según plan</b><i class="bar"><i style="width:64%"></i></i></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SÍNTOMAS -->
+  <section class="band">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--mint)">Motivo de consulta</p>
+      <h2 style="margin-top:14px">Si reconoce tres de estos, el problema no es el contenido.</h2>
+      <ul class="sym">
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>El formulario de la web llega a un correo que nadie revisa, o directamente no llega.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>Publican cuando alguien se acuerda, sin calendario ni criterio.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>Invierten en avisos sin saber cuánto cuesta cada cotización real.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>Un cliente escribe por WhatsApp un viernes y le responden el lunes.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>Tienen contratos y clientes que impresionan, pero no aparecen en la web.</span></li>
+        <li><svg width="19" height="19" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5M12 17h.01M10.3 3.9 2.4 18a1.8 1.8 0 0 0 1.6 2.7h16a1.8 1.8 0 0 0 1.6-2.7L13.7 3.9a1.8 1.8 0 0 0-3.4 0Z"/></svg><span>Nadie en la empresa puede decir cuántos clientes trajo el marketing el mes pasado.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section id="metodo">
+    <div class="wrap">
+      <p class="eyebrow">El método</p>
+      <h2 style="margin-top:14px; max-width:20ch">Diagnóstico, tratamiento y control.</h2>
+      <p class="lede" style="margin-top:16px; max-width:62ch">El mismo protocolo para todos los clientes. Usted ve el trabajo antes de que salga a la calle: nada se publica, se envía ni se activa sin su aprobación.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Diagnóstico</h3>
+            <p>Revisamos su sitio, sus redes, cómo aparece en Google, qué hace la competencia y por dónde se pierden los contactos. Termina en un informe con hallazgos concretos y prioridades, no en una presentación bonita.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Ficha de marca</h3>
+            <p>Dejamos por escrito a quién le hablamos, qué prometemos, con qué lo probamos y qué nunca decimos. Todo lo que producimos después se mide contra esa ficha.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Producción</h3>
+            <p>Calendario, textos finales, piezas gráficas, campañas, funnels o chatbots según el plan. Nada de "propuestas de texto": lo que le entregamos está listo para publicar.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Control de calidad</h3>
+            <p>Antes de que usted lo vea, cada pieza pasa por una revisión de marca y cumplimiento: afirmaciones respaldadas, normativa chilena de publicidad y datos personales, reglas de las plataformas.</p>
+            <span class="tag">Especialmente estricto en salud y equipamiento médico</span>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Su aprobación</h3>
+            <p>Recibe el paquete completo con la fecha y hora de cada publicación. Aprueba todo, parte, o pide cambios. Recién ahí se programa.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-n"></div>
+          <div>
+            <h3>Reporte</h3>
+            <p>Qué pasó, qué funcionó, qué cambiamos el próximo mes. Con métricas de negocio —cotizaciones, costo por cotización, tiempo de respuesta— y no con capturas de pantalla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" style="background:var(--white); border-block:1px solid var(--line)">
+    <div class="wrap">
+      <p class="eyebrow">Prestaciones</p>
+      <h2 style="margin:14px 0 34px; max-width:24ch">Lo que hacemos, en concreto.</h2>
+      <div class="grid g3">
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 5h16M4 12h10M4 19h7"/></svg></div>
+          <h3>Contenido y redes</h3>
+          <p>Calendario mensual y piezas finales para LinkedIn, Instagram y Facebook: texto, imagen, hashtags, horario y una versión para el perfil del gerente, que es donde más rinde en B2B.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8L3 5Z"/></svg></div>
+          <h3>Captación y funnels</h3>
+          <p>Páginas de aterrizaje, formularios que sí guardan el contacto, secuencias de correo y WhatsApp, y un embudo donde se ve en qué etapa está cada oportunidad.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg></div>
+          <h3>Google, Meta y SEO</h3>
+          <p>Campañas donde hay intención de compra y no donde hay ruido, con palabras negativas desde el día uno. Y el trabajo lento pero permanente: que su sitio aparezca solo.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M20 15a3 3 0 0 1-3 3H8l-4 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v9Z"/><path d="M9 10h.01M13 10h.01"/></svg></div>
+          <h3>Chatbots y automatizaciones</h3>
+          <p>Un asistente en WhatsApp que responde al instante, califica, agenda y avisa a una persona cuando corresponde. Se presenta como automático y siempre ofrece hablar con alguien real.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+          <h3>Medición y reportes</h3>
+          <p>Instalamos lo que falta —analítica, etiquetas, orígenes de cada contacto— y después informamos en plata y cotizaciones, no en impresiones.</p>
+        </div>
+        <div class="card">
+          <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg></div>
+          <h3>Puesta a punto</h3>
+          <p>Antes de invertir un peso en publicidad: arreglar el formulario roto, el dominio caído, la portada con texto de prueba. Es lo más barato y lo que más rinde.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANES -->
+  <section id="planes">
+    <div class="wrap">
+      <p class="eyebrow">Planes mensuales</p>
+      <h2 style="margin:14px 0 12px; max-width:26ch">Tres niveles de tratamiento.</h2>
+      <p class="lede" style="margin-bottom:34px; max-width:62ch">Todos incluyen ficha de marca, calendario, control de calidad y reporte. La inversión en publicidad va aparte y la paga usted directamente a la plataforma.</p>
+      <div class="grid g3">
+
+        <div class="plan">
+          <h3>Presencia</h3>
+          <p class="who">Para la empresa que necesita existir con dignidad en sus redes.</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>2 canales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>8 publicaciones + 4 historias al mes</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Calendario editorial mensual</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Guía de respuestas para comentarios y mensajes</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Reporte mensual</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Cotizar Presencia</a>
+        </div>
+
+        <div class="plan feature">
+          <h3>Crecimiento</h3>
+          <p class="who">Para la que ya tiene oferta clara y quiere que lleguen cotizaciones.</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>3 canales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>16 publicaciones + 8 historias + 1 video al mes</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>4 publicaciones para el perfil del gerente</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>1 campaña gestionada (Google o Meta)</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>1 artículo mensual y base técnica de SEO</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Reporte quincenal</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Cotizar Crecimiento</a>
+        </div>
+
+        <div class="plan">
+          <h3>Integral</h3>
+          <p class="who">Para la que quiere un sistema completo de captación y seguimiento.</p>
+          <ul>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>4 canales</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>24 publicaciones + 12 historias + 2 videos al mes</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Campañas en Google, Meta y LinkedIn</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Embudo y CRM con automatizaciones</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Chatbot de WhatsApp incluido</li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24"><path d="m4 12 5 5L20 6"/></svg>Reporte semanal y reunión mensual</li>
+          </ul>
+          <a class="btn btn-ghost" href="#contacto">Cotizar Integral</a>
+        </div>
+
+      </div>
+      <p style="margin-top:22px; font-size:.9rem; color:var(--ink-3)">¿Necesita algo puntual —una landing, un chatbot, una auditoría, una campaña para una feria? También se cotiza por separado.</p>
+    </div>
+  </section>
+
+  <!-- QUIÉN -->
+  <section id="quien" style="background:var(--white); border-block:1px solid var(--line)">
+    <div class="wrap bio">
+      <div class="stack">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2>Conocemos su negocio desde adentro.</h2>
+        <p class="lede">Clínica del Marketing nace de operar empresas, no de estudiarlas. Dirigimos compañías de equipamiento médico y de servicios de ingeniería: sabemos cómo compra un jefe de imagenología, qué le exige un jefe de abastecimiento a un proveedor y por qué una licitación no se gana con avisos en Instagram.</p>
+        <p class="lede">Ese criterio es lo que traemos. La producción se apoya en un equipo de agentes de inteligencia artificial que trabaja con nuestro método y bajo supervisión humana: eso nos permite entregar rápido y cobrar menos que una agencia tradicional, sin que ninguna pieza salga sin que una persona la revise y usted la apruebe.</p>
+      </div>
+      <div class="bio-card">
+        <dl>
+          <div><dt>Dirección</dt><dd>Pablo Fernández Donoso — Ingeniero Biomédico e Ingeniero Comercial, Universidad de Valparaíso.</dd></div>
+          <div><dt>Experiencia</dt><dd>CEO de Medical Market (equipamiento de imagenología) y de B Ingeniería (mantenimiento industrial y clínico).</dd></div>
+          <div><dt>Sectores</dt><dd>Salud y equipamiento médico, industria, servicios B2B y pymes que venden a empresas.</dd></div>
+          <div><dt>Base</dt><dd>Valparaíso y Viña del Mar. Trabajamos con clientes de todo Chile.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section>
+    <div class="wrap" style="max-width:860px">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 style="margin:14px 0 22px">Antes de que las haga.</h2>
+
+      <details open>
+        <summary>¿Usan inteligencia artificial para producir?</summary>
+        <p>Sí, y preferimos decirlo. Un equipo de agentes especializados —estrategia, redacción, arte, campañas, análisis y control de calidad— produce bajo un método fijo y con supervisión humana. Las imágenes generadas se declaran como tales. Lo que no hacemos es publicar nada sin que una persona lo revise y sin que usted lo apruebe.</p>
+      </details>
+
+      <details>
+        <summary>¿Qué pasa si trabajo en salud y hay cosas que no se pueden decir?</summary>
+        <p>Es exactamente donde somos más cuidadosos. Nada de promesas clínicas ni de resultados en pacientes, especificaciones solo desde la ficha técnica del fabricante, marcas representadas con autorización vigente, y formularios y chatbots con el consentimiento que exige la ley de datos personales. Cada pieza pasa por esa revisión antes de llegarle.</p>
+      </details>
+
+      <details>
+        <summary>¿En cuánto tiempo se ven resultados?</summary>
+        <p>Depende del canal, y le vamos a dar el rango realista, no el que suena mejor. Una campaña de búsqueda bien enfocada puede traer cotizaciones en semanas. El posicionamiento orgánico toma entre tres y seis meses. Antes de fijar metas medimos tres meses de línea base: poner objetivos sin datos produce números inventados que no sirven a nadie.</p>
+      </details>
+
+      <details>
+        <summary>¿Me amarran a un contrato largo?</summary>
+        <p>Los planes tienen un mínimo de tres meses —menos que eso no alcanza a mostrar nada— y después se cancelan avisando con 30 días. Los entregables quedan suyos.</p>
+      </details>
+
+      <details>
+        <summary>¿Trabajan con empresas fuera de salud e industria?</summary>
+        <p>Sí. El método es el mismo para cualquier empresa que venda a otras empresas o que tenga un ciclo de venta con cotización de por medio. Donde no somos los indicados es en comercio masivo de bajo ticket.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap">
+      <div class="final">
+        <h2>Partamos por el diagnóstico.</h2>
+        <p>Revisamos su sitio, sus redes y su presencia en Google, y le decimos qué arreglaríamos primero. Sin costo y sin compromiso: si después quiere hacerlo por su cuenta, con el informe le alcanza.</p>
+        <div class="final-cta">
+          <!-- Cuando exista el número de WhatsApp, reponer aquí:
+          <a class="btn btn-primary" href="https://wa.me/569XXXXXXXX?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20de%20mi%20marketing" rel="noopener">Escribir por WhatsApp</a>
+          -->
+          <a class="btn btn-primary" href="mailto:contacto@clinicadelmarketing.cl?subject=Quiero%20un%20diagn%C3%B3stico%20de%20mi%20marketing">Escribir a contacto@clinicadelmarketing.cl</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div style="display:flex; align-items:center; gap:10px">
+      <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0B3B36"/><path d="M5 17h4l2.5-6 3.5 12 3-9 2 3h7" fill="none" stroke="#5EEAD4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>Clínica del Marketing · Valparaíso, Chile</span>
+    </div>
+    <div style="display:flex; gap:22px; flex-wrap:wrap">
+      <a href="mailto:contacto@clinicadelmarketing.cl">contacto@clinicadelmarketing.cl</a>
+      <a href="#metodo">Método</a>
+      <a href="#planes">Planes</a>
+    </div>
+    <div>© <span id="y">2026</span> Clínica del Marketing</div>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
