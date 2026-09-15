@@ -152,6 +152,19 @@
   .final .btn-ghost{background:transparent; border-color:rgba(255,255,255,.32); color:#fff}
   .final .btn-ghost:hover{border-color:#fff; color:#fff}
   .final-cta{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:28px}
+  /* contacto: texto + formulario */
+  .contact-grid{display:grid; grid-template-columns:1.05fr 1fr; gap:36px; align-items:start}
+  @media (max-width:900px){ .contact-grid{grid-template-columns:1fr} }
+  .final.left{text-align:left}
+  .final.left p{margin-inline:0}
+  .final.left .final-cta{justify-content:flex-start}
+  .final .alt{margin-top:22px; font-size:.9rem; color:#B9D6D0}
+  .final .alt a{color:#fff; text-decoration:underline; text-underline-offset:3px}
+  .form-card{background:var(--white); border:1px solid var(--line); border-radius:22px; padding:clamp(22px,3vw,34px); box-shadow:var(--shadow)}
+  .form-card h3{font-size:1.25rem; margin-bottom:6px}
+  .form-card > p{color:var(--ink-2); font-size:.95rem; margin-bottom:18px}
+  .form-card .legal{margin-top:14px; font-size:.8rem; line-height:1.5; color:var(--ink-3)}
+  .form-card .legal a{color:var(--brand-2)}
 
   footer{padding:44px 0 60px; border-top:1px solid var(--line); margin-top:clamp(60px,7vw,100px)}
   .foot{display:flex; flex-wrap:wrap; gap:18px 34px; align-items:center; justify-content:space-between; font-size:.9rem; color:var(--ink-3)}
@@ -426,15 +439,23 @@
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- CTA + formulario -->
   <section id="contacto" style="padding-top:0">
     <div class="wrap">
-      <div class="final">
-        <h2>Partamos por el diagnóstico.</h2>
-        <p>Revisamos su sitio, sus redes y su presencia en Google, y le decimos qué arreglaríamos primero. Sin costo y sin compromiso: si después quiere hacerlo por su cuenta, con el informe le alcanza.</p>
-        <div class="final-cta">
-          <a class="btn btn-primary" href="https://wa.me/56996265508?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20de%20mi%20marketing" target="_blank" rel="noopener">Escribir por WhatsApp</a>
-          <a class="btn btn-ghost" href="mailto:contacto@clinicadelmarketing.cl?subject=Quiero%20un%20diagn%C3%B3stico%20de%20mi%20marketing">Escribir a contacto@clinicadelmarketing.cl</a>
+      <div class="contact-grid">
+        <div class="final left">
+          <h2>Partamos por el diagnóstico.</h2>
+          <p>Revisamos su sitio, sus redes y su presencia en Google, y le decimos qué arreglaríamos primero. Sin costo y sin compromiso: si después quiere hacerlo por su cuenta, con el informe le alcanza.</p>
+          <div class="final-cta">
+            <a class="btn btn-primary" href="https://wa.me/56996265508?text=Hola%2C%20quiero%20el%20diagn%C3%B3stico%20de%20mi%20marketing" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          </div>
+          <p class="alt">¿Prefiere el correo? <a href="mailto:contacto@clinicadelmarketing.cl?subject=Quiero%20un%20diagn%C3%B3stico%20de%20mi%20marketing">contacto@clinicadelmarketing.cl</a></p>
+        </div>
+        <div class="form-card" id="formulario">
+          <h3>O déjenos sus datos</h3>
+          <p>Le escribimos por WhatsApp dentro del día hábil para coordinar el diagnóstico.</p>
+          <script data-b24-form="inline/21/66nns9" data-skip-moving="true">(function(w,d,u){var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0);var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);})(window,document,'https://cdn.bitrix24.es/b29958701/crm/form/loader_21.js');</script>
+          <p class="legal">Al enviar este formulario autoriza a Clínica del Marketing a usar sus datos únicamente para responder su consulta y preparar el diagnóstico, conforme a la Ley 21.719 sobre protección de datos personales. No los compartimos con terceros y puede pedir su eliminación en cualquier momento escribiendo a <a href="mailto:contacto@clinicadelmarketing.cl">contacto@clinicadelmarketing.cl</a>.</p>
         </div>
       </div>
     </div>
